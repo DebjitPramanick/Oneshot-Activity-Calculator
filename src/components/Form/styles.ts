@@ -39,7 +39,7 @@ export const CustomInput = styled.input`
 export const RangeSlider = styled.input`
     -webkit-appearance: none;
     width: 100%;
-    height: 4px;
+    height: 3px;
     border-radius: 5px;  
     background: #d3d3d3;
     outline: none;
@@ -64,4 +64,5 @@ export const RangeSlider = styled.input`
       background: ${colors.sliderHandler};
       cursor: pointer;
     }
+
 `

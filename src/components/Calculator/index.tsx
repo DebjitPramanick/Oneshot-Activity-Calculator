@@ -4,6 +4,7 @@ import { ActionsContainer, CaculatorContainer, InputsContainer } from './styles'
 import FieldsData from './fieldsData'
 import { calculateResultHelper } from '../../helpers/calculator.helper'
 import OutputView from './OuputView'
+import InputView from './InputView'
 
 const initialOutput = {
     customers: 0,
@@ -19,6 +20,12 @@ const Calculator = () => {
     const [outputData, setOutputData] = useState(initialOutput)
 
     useEffect(() => {
+        const calculateOutput = () => {
+            let [dealsize, revenueGoal, dealCnvRate, oppCnvRate, leadsCnvRate] = fieldsData;
+            const result = calculateResultHelper(dealsize.val, revenueGoal.val, dealCnvRate.val, oppCnvRate.val, leadsCnvRate.val)
+            setOutputData(result)
+        }
+
         calculateOutput()
     }, [fieldsData])
 
@@ -30,27 +37,11 @@ const Calculator = () => {
         setFieldsData(newData)
     }
 
-    const calculateOutput = () => {
-        let [dealsize, revenueGoal, dealCnvRate, oppCnvRate, leadsCnvRate] = fieldsData;
-        const result = calculateResultHelper(dealsize.val, revenueGoal.val, dealCnvRate.val, oppCnvRate.val, leadsCnvRate.val)
-        setOutputData(result)
-    }
-
     return (
         <CaculatorContainer>
             <ActionsContainer>
-                <InputsContainer>
-                    {fieldsData.map(field => (
-                        <SliderInput
-                            key={field.id}
-                            label={field.title}
-                            val={field.val}
-                            onChange={(val) => handleFieldVal(field.id, val)}
-                            max={field.max}
-                            min={field.min} />
-                    ))}
-                </InputsContainer>
-                <OutputView outputData={outputData}/>
+                <InputView fieldsData={fieldsData} handleFieldVal={handleFieldVal}/>
+                <OutputView outputData={outputData} />
             </ActionsContainer>
         </CaculatorContainer>
     )

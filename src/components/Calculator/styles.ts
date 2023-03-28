@@ -8,7 +8,6 @@ export const CaculatorContainer = styled.div`
     right: 0;
     margin: auto;
     width: 1100px;
-    // padding: 20px 40px;
     border-radius: 4px;
     box-shadow: 0 1px 10px 0 #0000001a;
     background: #fff;
@@ -18,14 +17,13 @@ export const CaculatorContainer = styled.div`
     }
 
     @media(max-width: 800px){
-        padding: 20px 16px;
-        width: calc(100% - 32px);
+        padding: 20px 0 0;
+        width: 100%;
     }
 `
 
 export const ActionsContainer = styled.div`
     display: flex;
-    // gap: 60px;
 
     @media(max-width: 800px){
         gap: 0;
@@ -48,6 +46,9 @@ export const OutputsContainer = styled.div`
 `
 export const OutputData = styled.div`
     margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px
 `
 export const OutputDataItem = styled.div`
     display: flex;
@@ -60,5 +61,24 @@ export const OutputDataItem = styled.div`
     }
     & .op-data-val {
         font-weight: bold
+    }
+`
+
+export const EmailData = styled.div`
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    font-size: 30px;
+    color: #fff;
+
+    & .email-large {
+        font-size: 30px;
+        color: #fff;
     }
 `
