@@ -1,11 +1,11 @@
 import React from 'react'
 import Calculator from '../components/Calculator'
-import { HeaderOverlay, HeaderOverlayContent, HomeHeader } from '../styles/Layout'
+import { HeaderOverlay, HeaderOverlayContent, HomeHeader, HomeLayout } from '../styles/Layout'
 import { Heading, Text } from '../styles/Typography'
 
 const Home = () => {
     return (
-        <>
+        <HomeLayout>
             <HomeHeader>
                 <HeaderOverlay>
                     <HeaderOverlayContent>
@@ -18,7 +18,7 @@ const Home = () => {
                 </HeaderOverlay>
                 <Calculator />
             </HomeHeader>
-        </>
+        </HomeLayout>
     )
 }
 

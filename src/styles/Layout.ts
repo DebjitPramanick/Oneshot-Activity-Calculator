@@ -2,6 +2,11 @@ import styled from 'styled-components'
 
 const HeaderBG = require("../assets/meeting.jpg") 
 
+export const HomeLayout = styled.div`
+    padding-bottom: 40px;
+    min-height: 100vh;
+`
+
 export const HomeHeader = styled.div`
     background: url(${HeaderBG});
     height: 300px;

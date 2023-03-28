@@ -52,7 +52,11 @@ export const OutputData = styled.div`
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px
+    gap: 20px;
+
+    @media(max-width: 800px){
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
 `
 export const OutputDataItem = styled.div`
     display: flex;
@@ -88,9 +92,8 @@ export const EmailData = styled.div`
     gap: 10px;
     justify-content: center;
     border-radius: 50%;
-    border: 6px solid #fff;
+    border: 4px solid #fff;
     font-size: 30px;
-    color: #fff;
 
     & .email-large {
         font-size: 30px;

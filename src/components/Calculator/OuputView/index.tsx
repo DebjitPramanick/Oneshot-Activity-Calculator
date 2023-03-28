@@ -25,7 +25,6 @@ const OutputView: React.FC<PropsType> = ({ outputData }) => {
     return (
         <OutputsContainer>
             <SubHeading>Result</SubHeading>
-            <hr style={{ marginTop: 20 }} />
             <OutputData>
                 <EmailDataContainer>
                     <EmailData>

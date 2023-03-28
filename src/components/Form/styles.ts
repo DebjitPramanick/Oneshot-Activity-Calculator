@@ -12,6 +12,7 @@ export const LabelFlex = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-bottom: 16px;
+    gap: 10px;
 `
 
 export const CustomInput = styled.input`
@@ -63,6 +64,13 @@ export const RangeSlider = styled.input`
       border-radius: 50%;
       background: ${colors.sliderHandler};
       cursor: pointer;
+    }
+
+    &::-moz-range-progress {
+      background-color: ${colors.sliderHandler};
+    }
+    &::-ms-fill-lower {
+      background-color: ${colors.sliderHandler};
     }
 
 `

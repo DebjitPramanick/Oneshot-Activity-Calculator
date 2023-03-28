@@ -17,7 +17,7 @@ const fieldsData = [
     },
     {
         id: 3,
-        title: 'Operation to Deal Conversation rate',
+        title: 'Opportunity to Deal conversion rate',
         val: 5,
         type: 'percentage',
         min: 1,
@@ -33,7 +33,7 @@ const fieldsData = [
     },
     {
         id: 5,
-        title: 'Meeting to Leads Conversation',
+        title: 'Meeting to Leads conversion rate',
         val: 2,
         type: 'percentage',
         min: 1,
