@@ -79,7 +79,7 @@ const OutputView: React.FC<PropsType> = ({ outputData }) => {
                         </SmallText></>
                 ) : (
                     <>
-                        <Flex style={{ gap: 4, marginBottom: '10px' }}><AiOutlineLike size={30} /> <Text>Message</Text></Flex>
+                        <Flex style={{ gap: 4, marginBottom: '10px' }}><AiOutlineLike size={20} /> <Text>Message</Text></Flex>
                         <SmallText>
                             You can also try out <a href='https://www.oneshot.ai/'>oneshot.ai</a> to make it fully AI
                             driven automated prospecting.
