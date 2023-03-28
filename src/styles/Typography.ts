@@ -10,7 +10,7 @@ export const Text = styled.p`
 `
 export const SmallText = styled.p`
     font-style: normal;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: -0.02em;
     color: #4F4F4F;
     text-overflow: ellipsis;

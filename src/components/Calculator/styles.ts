@@ -44,7 +44,7 @@ export const OutputsContainer = styled.div`
     padding: 30px;
     background: ${colors.sliderHandler};
     
-    p, h1, a {
+    p, h1 {
         color: #fff;
     }
 `
@@ -99,5 +99,21 @@ export const EmailData = styled.div`
         font-size: 36px;
         font-weight: bold;
         color: #fff;
+    }
+`
+
+export const MessageBox = styled.div`
+    margin: 40px 0 30px 0;
+    padding: 16px;
+    background: #ccf1cc;
+    border-radius: 4px;
+
+    &.warning{
+        background: #f1e4b5;
+    }
+
+    p,a {
+        color: #6a6a6a;
+        font-size: 14px;
     }
 `
