@@ -18,6 +18,7 @@ const Home = () => {
                 </HeaderOverlay>
                 <Calculator />
             </HomeHeader>
+            <div style={{marginTop: '600px'}}></div>
         </HomeLayout>
     )
 }

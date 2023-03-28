@@ -78,7 +78,7 @@ const OutputView: React.FC<PropsType> = ({ outputData }) => {
                     driven automated prospecting.
                 </Text>
             )}
-            <Button style={{ marginLeft: 'auto' }} onClick={redirectUser}><BsChatDots size={16} /> Chat With Us</Button>
+            <Button style={{ margin: 'auto' }} onClick={redirectUser}><BsChatDots size={16} /> Chat With Us</Button>
         </OutputsContainer>
     )
 }

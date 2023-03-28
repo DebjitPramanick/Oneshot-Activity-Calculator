@@ -9,7 +9,7 @@ export const CaculatorContainer = styled.div`
     margin: auto;
     width: 1100px;
     border-radius: 4px;
-    box-shadow: 0 1px 10px 0 #0000001a;
+    box-shadow: 2px 2px 10px #0000008a;
     background: #fff;
     overflow:hidden;
 
@@ -92,11 +92,12 @@ export const EmailData = styled.div`
     gap: 10px;
     justify-content: center;
     border-radius: 50%;
-    border: 4px solid #fff;
     font-size: 30px;
+    box-shadow: -2px -2px 10px ${colors.sliderHandler}, 2px 2px 10px #0000008a;
 
     & .email-large {
-        font-size: 30px;
+        font-size: 36px;
+        font-weight: bold;
         color: #fff;
     }
 `
