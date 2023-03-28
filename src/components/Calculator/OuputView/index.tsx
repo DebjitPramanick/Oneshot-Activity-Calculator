@@ -2,7 +2,7 @@ import React from 'react'
 import { formatNumber } from '../../../helpers/calculator.helper'
 import { Button } from '../../../styles/Form'
 import { SubHeading, Text } from '../../../styles/Typography'
-import { EmailData, OutputData, OutputDataItem, OutputsContainer } from '../styles'
+import { EmailData, EmailDataContainer, OtherDataContainer, OutputData, OutputDataItem, OutputsContainer } from '../styles'
 import { IoPeopleOutline } from 'react-icons/io5'
 import { MdOutlineBusinessCenter } from 'react-icons/md'
 import { MdOutlineLeaderboard } from 'react-icons/md'
@@ -27,14 +27,16 @@ const OutputView: React.FC<PropsType> = ({ outputData }) => {
             <SubHeading>Result</SubHeading>
             <hr style={{ marginTop: 20 }} />
             <OutputData>
-                <EmailData>
-                    <Text className='email-large'>{formatNumber(outputData.emails)}</Text>
-                    <Flex style={{ gap: 10 }}>
-                        <AiOutlineMail size={20} color={'#fff'} />
-                        <Text className='op-data-label'>Emails</Text>
-                    </Flex>
-                </EmailData>
-                <div style={{ width: '100%' }}>
+                <EmailDataContainer>
+                    <EmailData>
+                        <Text className='email-large'>{formatNumber(outputData.emails)}</Text>
+                        <Flex style={{ gap: 10 }}>
+                            <AiOutlineMail size={20} color={'#fff'} />
+                            <Text className='op-data-label'>Emails</Text>
+                        </Flex>
+                    </EmailData>
+                </EmailDataContainer>
+                <OtherDataContainer>
                     <OutputDataItem>
                         <Flex style={{ gap: 10 }}>
                             <IoPeopleOutline size={20} color={'#fff'} />
@@ -63,7 +65,7 @@ const OutputView: React.FC<PropsType> = ({ outputData }) => {
                         </Flex>
                         <Text className='op-data-val'>{formatNumber(outputData.leads)}</Text>
                     </OutputDataItem>
-                </div>
+                </OtherDataContainer>
             </OutputData>
             {outputData.emails > 100 ? (
                 <Text style={{ margin: '40px 0 30px 0' }}>

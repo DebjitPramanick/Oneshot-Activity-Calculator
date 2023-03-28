@@ -11,13 +11,17 @@ export const CaculatorContainer = styled.div`
     border-radius: 4px;
     box-shadow: 0 1px 10px 0 #0000001a;
     background: #fff;
+    overflow:hidden;
 
     @media(max-width: 1180px){
         width: calc(100% - 112px);
     }
 
     @media(max-width: 800px){
-        padding: 20px 0 0;
+        width: calc(100% - 60px);
+    }
+
+    @media(max-width: 500px){
         width: 100%;
     }
 `
@@ -48,7 +52,7 @@ export const OutputData = styled.div`
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 16px
+    gap: 20px
 `
 export const OutputDataItem = styled.div`
     display: flex;
@@ -62,6 +66,17 @@ export const OutputDataItem = styled.div`
     & .op-data-val {
         font-weight: bold
     }
+`
+
+export const EmailDataContainer = styled.div`
+    display: flex;
+    justify-content: center;
+`
+
+export const OtherDataContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 `
 
 export const EmailData = styled.div`
