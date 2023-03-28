@@ -19,7 +19,7 @@ export const SmallText = styled.p`
 
 export const Heading = styled.h1`
     font-style: normal;
-    font-size: 30px;
+    font-size: 40px;
     letter-spacing: -0.02em;
     color: #4F4F4F;
     text-overflow: ellipsis;
