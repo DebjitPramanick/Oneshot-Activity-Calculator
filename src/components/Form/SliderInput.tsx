@@ -21,6 +21,7 @@ const SliderInput: React.FC<PropsType> = ({
     const changeHandler = (e: any) => {
         let value = e.target.value;
         if(value > max) value = max;
+        if(value < min) value = min;
         onChange(value)
     }
 
