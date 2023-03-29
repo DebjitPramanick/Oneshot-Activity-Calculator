@@ -19,7 +19,7 @@ export const CustomInput = styled.input`
     padding: 6px 12px;
     outline: 0;
     border: 0;
-    color: #4F4F4F;
+    color: ${colors.text};
     background: ${colors.inputBG};
     font-style: normal;
     font-weight: 500;
@@ -42,7 +42,7 @@ export const RangeSlider = styled.input`
     width: 100%;
     height: 3px;
     border-radius: 5px;  
-    background: #d3d3d3;
+    background: ${colors.rangeInputBG};
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;

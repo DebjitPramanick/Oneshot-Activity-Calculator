@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
-import SliderInput from '../Form/SliderInput'
-import { ActionsContainer, CaculatorContainer, InputsContainer } from './styles'
+import { ActionsContainer, CaculatorContainer } from './styles'
 import FieldsData from './fieldsData'
 import { calculateResultHelper } from '../../helpers/calculator.helper'
 import OutputView from './OuputView'
