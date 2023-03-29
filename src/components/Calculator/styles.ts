@@ -13,7 +13,7 @@ export const CaculatorContainer = styled.div`
         width: calc(100% - 112px);
     }
 
-    @media(max-width: 800px){
+    @media(max-width: 1000px){
         width: calc(100% - 60px);
     }
 
@@ -25,7 +25,7 @@ export const CaculatorContainer = styled.div`
 export const ActionsContainer = styled.div`
     display: flex;
 
-    @media(max-width: 800px){
+    @media(max-width: 1000px){
         gap: 0;
         flex-direction: column;
     }
@@ -47,7 +47,7 @@ export const OutputsContainer = styled.div`
 export const OutputData = styled.div`
     margin-top: 30px;
 
-    @media(max-width: 800px){
+    @media(max-width: 1000px){
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 `
