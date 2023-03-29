@@ -1,14 +1,13 @@
 import React from 'react'
 import { formatNumber } from '../../../helpers/calculator.helper'
 import { Button } from '../../../styles/Form'
-import { SmallText, SubHeading, Text } from '../../../styles/Typography'
-import { MainData, MainDataContainer, MessageBox, OtherDataContainer, OutputData, OutputDataItem, OutputsContainer } from '../styles'
+import { SubHeading, Text } from '../../../styles/Typography'
+import { CircleDataContainer, MainData, OutputData, OutputDataItem, OutputsContainer, RowDataContainer } from '../styles'
 import { IoPeopleOutline } from 'react-icons/io5'
 import { MdOutlineBusinessCenter } from 'react-icons/md'
 import { MdOutlineLeaderboard } from 'react-icons/md'
 import { FaRegHandshake } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
-import { AiOutlineInfoCircle } from 'react-icons/ai'
 import { Flex } from '../../../styles/Shared'
 
 interface PropsType {
@@ -26,7 +25,7 @@ const OutputView: React.FC<PropsType> = ({ outputData }) => {
         <OutputsContainer>
             <SubHeading>Result</SubHeading>
             <OutputData>
-                <MainDataContainer>
+                <CircleDataContainer>
                     <MainData>
                         <Text className='highlight-text'>{formatNumber(outputData.emails)}</Text>
                         <Flex style={{ gap: 10 }}>
@@ -40,8 +39,8 @@ const OutputView: React.FC<PropsType> = ({ outputData }) => {
                             <Text className='op-data-label'>Leads</Text>
                         </Flex>
                     </MainData>
-                </MainDataContainer>
-                <OtherDataContainer>
+                </CircleDataContainer>
+                <RowDataContainer>
                     <OutputDataItem>
                         <div className='op-data-label-container'>
                             <IoPeopleOutline size={20} />
@@ -77,16 +76,13 @@ const OutputView: React.FC<PropsType> = ({ outputData }) => {
                         </div>
                         <Text className='op-data-val'>{formatNumber(outputData.emails)}</Text>
                     </OutputDataItem>
-                </OtherDataContainer>
+                </RowDataContainer>
             </OutputData>
 
             <div style={{ marginTop: '20px' }}>
                 <SubHeading>
                     Feeling overwhelmed with all these activities?
                 </SubHeading>
-                <Text style={{ marginTop: '20px' }}>
-                    Talk to us for the most personalized experience possible.
-                </Text>
                 <Button style={{ margin: '30px auto 0' }} onClick={redirectUser}>Book a demo</Button>
             </div>
         </OutputsContainer>

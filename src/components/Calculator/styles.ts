@@ -4,7 +4,7 @@ import { colors } from '../../styles/Colors'
 export const CaculatorContainer = styled.div`
     margin: 20px auto;
     width: 1100px;
-    // height: 920px;
+    // height: 1500px;
     border-radius: 4px;
     box-shadow: 2px 2px 10px #0000008a;
     background: #fff;
@@ -73,13 +73,13 @@ export const OutputDataItem = styled.div`
     }
 `
 
-export const MainDataContainer = styled.div`
+export const CircleDataContainer = styled.div`
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
 `
 
-export const OtherDataContainer = styled.div`
+export const RowDataContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -114,6 +114,10 @@ export const MainData = styled.div`
         @media(max-width: 768px) {
             font-size: 30px;
         }
+
+        @media(max-width: 445px){
+            font-size: 26px;
+        }
     }
 
     @media(max-width: 1180px) {
@@ -126,6 +130,10 @@ export const MainData = styled.div`
 
     @media(max-width: 768px) {
         width: 260px;
+    }
+
+    @media(max-width: 445px){
+        width: 200px;
     }
 `
 
