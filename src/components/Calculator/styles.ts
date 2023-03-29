@@ -4,6 +4,7 @@ import { colors } from '../../styles/Colors'
 export const CaculatorContainer = styled.div`
     margin: 20px auto;
     width: 1100px;
+    // height: 920px;
     border-radius: 4px;
     box-shadow: 2px 2px 10px #0000008a;
     background: #fff;
@@ -13,7 +14,7 @@ export const CaculatorContainer = styled.div`
         width: calc(100% - 112px);
     }
 
-    @media(max-width: 800px){
+    @media(max-width: 770px){
         width: calc(100% - 60px);
     }
 
@@ -24,8 +25,9 @@ export const CaculatorContainer = styled.div`
 
 export const ActionsContainer = styled.div`
     display: flex;
+    height: 100%;
 
-    @media(max-width: 800px){
+    @media(max-width: 770px){
         gap: 0;
         flex-direction: column;
     }
@@ -47,7 +49,7 @@ export const OutputsContainer = styled.div`
 export const OutputData = styled.div`
     margin-top: 30px;
 
-    @media(max-width: 800px){
+    @media(max-width: 770px){
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 `
@@ -84,7 +86,7 @@ export const OtherDataContainer = styled.div`
 `
 
 export const MainData = styled.div`
-    height: 280px;
+    aspect-ratio : 1 / 1;
     width: 280px;
     display: flex;
     align-items: center;
@@ -99,16 +101,35 @@ export const MainData = styled.div`
         font-size: 36px;
         font-weight: bold;
         color: #fff;
+
+        @media(max-width: 1180px) {
+            font-size: 30px;
+        }
+    
+        @media(max-width: 1050px) {
+            font-size: 26px;
+        }
+
+        @media(max-width: 770px) {
+            font-size: 30px;
+        }
     }
 
-    @media(max-width: 300px) {
-        height: calc(100vw - 60px);
-        width: calc(100vw - 60px);
+    @media(max-width: 1180px) {
+        width: 240px;
+    }
+
+    @media(max-width: 1050px) {
+        width: 200px;
+    }
+
+    @media(max-width: 770px) {
+        width: 260px;
     }
 `
 
 export const MessageBox = styled.div`
-    margin: 40px 0 30px 0;
+    margin: 20px 0 30px 0;
     padding: 16px;
     background: linear-gradient(135deg, ${colors.gradientA} 0%, ${colors.gradientB} 100%);
     border-radius: 4px;
