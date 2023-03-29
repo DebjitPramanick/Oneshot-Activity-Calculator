@@ -7,7 +7,6 @@ import { IoPeopleOutline } from 'react-icons/io5'
 import { MdOutlineBusinessCenter } from 'react-icons/md'
 import { MdOutlineLeaderboard } from 'react-icons/md'
 import { FaRegHandshake } from 'react-icons/fa'
-import { BsChatDots } from 'react-icons/bs'
 import { AiOutlineMail } from 'react-icons/ai'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
 import { Flex } from '../../../styles/Shared'
@@ -102,7 +101,7 @@ const OutputView: React.FC<PropsType> = ({ outputData }) => {
                 <Text style={{ marginTop: '20px' }}>
                     Talk to us for the most personalized experience possible.
                 </Text>
-                <Button style={{ margin: '30px auto 0' }} onClick={redirectUser}><BsChatDots size={16} /> Book a demo</Button>
+                <Button style={{ margin: '30px auto 0' }} onClick={redirectUser}>Book a demo</Button>
             </div>
         </OutputsContainer>
     )

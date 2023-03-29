@@ -54,7 +54,7 @@ export const RangeSlider = styled.input`
       width: 18px;
       height: 18px;
       border-radius: 50%; 
-      background: ${colors.sliderHandler};
+      background: ${colors.gradientB};
       cursor: pointer;
     }
 
@@ -62,15 +62,15 @@ export const RangeSlider = styled.input`
       width: 18px;
       height: 18px;
       border-radius: 50%;
-      background: ${colors.sliderHandler};
+      background: ${colors.gradientB};
       cursor: pointer;
     }
 
     &::-moz-range-progress {
-      background-color: ${colors.sliderHandler};
+      background: linear-gradient(135deg, ${colors.gradientA} 0%, ${colors.gradientB} 100%);
     }
     &::-ms-fill-lower {
-      background-color: ${colors.sliderHandler};
+      background: linear-gradient(135deg, ${colors.gradientA} 0%, ${colors.gradientB} 100%);
     }
 
 `

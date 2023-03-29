@@ -38,9 +38,9 @@ export const InputsContainer = styled.div`
 export const OutputsContainer = styled.div`
     flex-basis: 50%;
     padding: 30px;
-    background: ${colors.sliderHandler};
+    background: linear-gradient(135deg, ${colors.gradientA} 0%, ${colors.gradientB} 100%);
     
-    p, h1 {
+    p, h1, a {
         color: #fff;
     }
 `
@@ -93,7 +93,7 @@ export const MainData = styled.div`
     justify-content: center;
     border-radius: 50%;
     font-size: 30px;
-    box-shadow: -2px -2px 10px ${colors.sliderHandler}, 2px 2px 10px #0000008a;
+    box-shadow: -2px -2px 10px #7e88e6, 2px 2px 10px #0000008a;
 
     & .highlight-text {
         font-size: 36px;
@@ -110,11 +110,12 @@ export const MainData = styled.div`
 export const MessageBox = styled.div`
     margin: 40px 0 30px 0;
     padding: 16px;
-    background: #ccf1cc;
+    background: linear-gradient(135deg, ${colors.gradientA} 0%, ${colors.gradientB} 100%);
     border-radius: 4px;
+    color: #fff;
+    box-shadow: 0 10px 20px -10px ${colors.shadow};
 
     p,a {
-        color: #6a6a6a;
         font-size: 14px;
     }
 `

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from './Colors'
 
 export const Button = styled.button`
     display: flex;
@@ -7,22 +8,16 @@ export const Button = styled.button`
     gap: 6px;
     border: 0;
     outline: 0;
-    width: 150px;
-    height: 39px;
-    border-radius: 4px;
     font-style: normal;
     font-size: 14px;
+    font-weight: bold;
     line-height: 12px;
     letter-spacing: -0.02em;
     cursor: pointer;
-    background: transparent;
-    border: 1px solid #fff;
     color: #fff;
     transition: 0.5s;
-
-    &:hover {
-        background: #fff;
-        color: #000;
-        border: #fff;
-    }
+    box-shadow: 0 10px 20px -10px ${colors.shadow};
+    background: linear-gradient(135deg, ${colors.gradientA} 0%, ${colors.gradientB} 100%);
+    padding: 12px 20px;
+    border-radius: 999px;
 `
