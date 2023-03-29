@@ -6,7 +6,8 @@ import { Heading, Text } from '../styles/Typography'
 const Home = () => {
     return (
         <HomeLayout>
-            <HomeHeader>
+            <Calculator />
+            {/* <HomeHeader>
                 <HeaderOverlay>
                     <HeaderOverlayContent>
                         <Heading>Activity Calculator</Heading>
@@ -17,8 +18,8 @@ const Home = () => {
                     </HeaderOverlayContent>
                 </HeaderOverlay>
                 <Calculator />
-            </HomeHeader>
-            <div style={{marginTop: '600px'}}></div>
+            </HomeHeader> */}
+            {/* <div style={{marginTop: '600px'}}></div> */}
         </HomeLayout>
     )
 }

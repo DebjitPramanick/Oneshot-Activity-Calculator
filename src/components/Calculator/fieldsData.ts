@@ -17,7 +17,7 @@ const fieldsData = [
     },
     {
         id: 3,
-        title: 'Opportunity to Deal conversion rate',
+        title: 'Suppose you have 100 deals. How many opportunities do you want?',
         val: 5,
         type: 'percentage',
         min: 1,
@@ -25,7 +25,7 @@ const fieldsData = [
     },
     {
         id: 4,
-        title: 'Meeting to Opportunity conversion rate',
+        title: 'Suppose you have 100 opportunities. How many meetings do you want?',
         val: 33,
         type: 'percentage',
         min: 1,
@@ -33,7 +33,7 @@ const fieldsData = [
     },
     {
         id: 5,
-        title: 'Meeting to Leads conversion rate',
+        title: 'Suppose you have 100 leads. How many meetings do you want?',
         val: 2,
         type: 'percentage',
         min: 1,
