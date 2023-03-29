@@ -14,7 +14,7 @@ export const CaculatorContainer = styled.div`
         width: calc(100% - 112px);
     }
 
-    @media(max-width: 770px){
+    @media(max-width: 768px){
         width: calc(100% - 60px);
     }
 
@@ -27,7 +27,7 @@ export const ActionsContainer = styled.div`
     display: flex;
     height: 100%;
 
-    @media(max-width: 770px){
+    @media(max-width: 768px){
         gap: 0;
         flex-direction: column;
     }
@@ -49,7 +49,7 @@ export const OutputsContainer = styled.div`
 export const OutputData = styled.div`
     margin-top: 30px;
 
-    @media(max-width: 770px){
+    @media(max-width: 768px){
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 `
@@ -110,7 +110,7 @@ export const MainData = styled.div`
             font-size: 26px;
         }
 
-        @media(max-width: 770px) {
+        @media(max-width: 768px) {
             font-size: 30px;
         }
     }
@@ -123,7 +123,7 @@ export const MainData = styled.div`
         width: 200px;
     }
 
-    @media(max-width: 770px) {
+    @media(max-width: 768px) {
         width: 260px;
     }
 `
