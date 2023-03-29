@@ -17,7 +17,7 @@ const fieldsData = [
     },
     {
         id: 3,
-        title: 'Suppose you have 100 deals. How many opportunities do you want?',
+        title: 'Suppose you have 100 opportunities. How many of them are converting into deals?',
         val: 5,
         type: 'percentage',
         min: 1,
@@ -25,7 +25,7 @@ const fieldsData = [
     },
     {
         id: 4,
-        title: 'Suppose you have 100 opportunities. How many meetings do you want?',
+        title: 'Suppose you have 100 cold meetings. How many of them are converting into opportunities?',
         val: 33,
         type: 'percentage',
         min: 1,
@@ -33,7 +33,7 @@ const fieldsData = [
     },
     {
         id: 5,
-        title: 'Suppose you have 100 leads. How many meetings do you want?',
+        title: 'Suppose you have reached 100 leads. How many of them are converting into meetings?',
         val: 2,
         type: 'percentage',
         min: 1,

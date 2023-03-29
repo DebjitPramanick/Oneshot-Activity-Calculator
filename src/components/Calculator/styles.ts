@@ -96,6 +96,7 @@ export const MainData = styled.div`
     border-radius: 50%;
     font-size: 30px;
     box-shadow: -2px -2px 10px #7e88e6, 2px 2px 10px #0000008a;
+    // background: linear-gradient(135deg, ${colors.gradientA} 0%, ${colors.gradientB} 100%);
 
     & .highlight-text {
         font-size: 36px;

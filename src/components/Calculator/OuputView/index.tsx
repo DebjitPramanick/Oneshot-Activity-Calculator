@@ -52,51 +52,37 @@ const OutputView: React.FC<PropsType> = ({ outputData }) => {
                     <OutputDataItem>
                         <div className='op-data-label-container'>
                             <MdOutlineBusinessCenter size={20} />
-                            <Text className='op-data-label'>No. of opportunities you will have: </Text>
+                            <Text className='op-data-label'>No. of opportunities you should have: </Text>
                         </div>
                         <Text className='op-data-val'>{formatNumber(outputData.opportunities)}</Text>
                     </OutputDataItem>
                     <OutputDataItem>
                         <div className='op-data-label-container'>
                             <FaRegHandshake size={20} />
-                            <Text className='op-data-label'>No. of meetings you will have: </Text>
+                            <Text className='op-data-label'>No. of meetings you should have: </Text>
                         </div>
                         <Text className='op-data-val'>{formatNumber(outputData.meetings)}</Text>
                     </OutputDataItem>
                     <OutputDataItem>
                         <div className='op-data-label-container'>
                             <MdOutlineLeaderboard size={20} />
-                            <Text className='op-data-label'>No. of leads you have to contact: </Text>
+                            <Text className='op-data-label'>No. of leads you should have to contact: </Text>
                         </div>
                         <Text className='op-data-val'>{formatNumber(outputData.leads)}</Text>
                     </OutputDataItem>
                     <OutputDataItem>
                         <div className='op-data-label-container'>
                             <AiOutlineMail size={20} />
-                            <Text className='op-data-label'>No. of emails you have to personalize and research: </Text>
+                            <Text className='op-data-label'>No. of emails you should have to personalize and research: </Text>
                         </div>
                         <Text className='op-data-val'>{formatNumber(outputData.emails)}</Text>
                     </OutputDataItem>
                 </OtherDataContainer>
             </OutputData>
-            <MessageBox>
-                <Flex style={{ gap: 4, marginBottom: '10px' }}><AiOutlineInfoCircle size={20} /> <Text>Message</Text></Flex>
-                {outputData.emails > 100 ? (
-                    <SmallText>
-                        Researching and personalising all these {formatNumber(outputData.emails)} emails is humanly impossible
-                        and hence why you should try out <a href='https://www.oneshot.ai/'>oneshot.ai</a> to make it fully AI
-                        driven automated prospecting.
-                    </SmallText>
-                ) : (
-                    <SmallText>
-                        You can also try out <a href='https://www.oneshot.ai/'>oneshot.ai</a> to make it fully AI
-                        driven automated prospecting.
-                    </SmallText>
-                )}
-            </MessageBox>
-            <div>
+
+            <div style={{ marginTop: '20px' }}>
                 <SubHeading>
-                    Feeling tideous with sending emails?
+                    Feeling overwhelmed with all these activities?
                 </SubHeading>
                 <Text style={{ marginTop: '20px' }}>
                     Talk to us for the most personalized experience possible.
