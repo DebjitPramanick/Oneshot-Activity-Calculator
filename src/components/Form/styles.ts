@@ -47,6 +47,14 @@ export const RangeSlider = styled.input`
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
+
+    &::-webkit-slider-runnable-track{
+      cursor: pointer;
+    }
+
+    &::-moz-range-track{
+      cursor: pointer;
+    }
   
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
