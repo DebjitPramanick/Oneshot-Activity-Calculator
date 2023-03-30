@@ -1,4 +1,4 @@
-const fieldsData = [
+const inputs = [
     {
         id: 1,
         title: 'Avg. deal size',
@@ -42,4 +42,4 @@ const fieldsData = [
 ]
 
 
-export default fieldsData;
+export default inputs;
