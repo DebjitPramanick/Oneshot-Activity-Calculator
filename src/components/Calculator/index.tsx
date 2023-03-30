@@ -8,6 +8,7 @@ import InputView from './InputView'
 import { SubHeading } from '../../styles/Typography'
 import { Button } from '../../styles/Form'
 import DMEO_OUTPUT from './data/demoOutput';
+import LABELS from './data/labels';
 
 const Calculator = () => {
 
@@ -17,6 +18,18 @@ const Calculator = () => {
     const [shouldReveal, setShouldReveal] = useState(true)
     const [shoulReload, setShouldReload] = useState(false)
     const [loading, setLoading] = useState(false)
+    const [labels, setLabels] = useState<any>(LABELS)
+
+    useEffect(() => {
+        const getIframeData = (e: any) => {
+            if(e.data && e.data.inputLabels) setLabels(e.data)
+        }
+        window.addEventListener('message', getIframeData)
+
+        return () => {
+            window.removeEventListener('message', getIframeData)
+        }
+    }, [])
 
     useEffect(() => {
 
@@ -90,7 +103,10 @@ const Calculator = () => {
                 </BlurOverlay>
             )}
             <ActionsContainer>
-                <InputView inputData={inputData} handleFieldVal={handleFieldVal} />
+                <InputView
+                    inputData={inputData}
+                    handleFieldVal={handleFieldVal}
+                    labels={labels.inputLabels} />
                 <OutputView
                     outputData={!shouldReveal ? DMEO_OUTPUT : outputData}
                     handleShowOutput={handleShowOutput}

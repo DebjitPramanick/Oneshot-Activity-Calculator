@@ -5,12 +5,14 @@ import { InputsContainer } from '../styles'
 
 interface PropsType {
     inputData: any,
-    handleFieldVal: (key: any, val: any) => void
+    handleFieldVal: (key: any, val: any) => void;
+    labels: any
 }
 
 const InputView: React.FC<PropsType> = ({
     handleFieldVal,
-    inputData
+    inputData,
+    labels
 }) => {
     return (
         <InputsContainer>
@@ -21,7 +23,7 @@ const InputView: React.FC<PropsType> = ({
             {inputData.length && inputData.map((input: any) => (
                 <SliderInput
                     key={input.id}
-                    label={input.title}
+                    label={labels[`${input.name}_label`]}
                     val={input.val}
                     onChange={(val) => handleFieldVal(input.id, val)}
                     max={input.max}
