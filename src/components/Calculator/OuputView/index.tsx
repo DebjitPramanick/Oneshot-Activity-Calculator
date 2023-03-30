@@ -24,7 +24,7 @@ const OutputView: React.FC<PropsType> = ({
 
 
     const redirectUser = () => {
-        window.location.href = 'https://calendly.com/oneshot_ai/oneshot-demo'
+        window.open('https://calendly.com/oneshot_ai/oneshot-demo')
     }
 
     const getKeyVal = (key: string) => {
