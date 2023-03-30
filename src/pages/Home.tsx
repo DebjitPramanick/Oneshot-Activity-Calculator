@@ -10,6 +10,7 @@ const Home = () => {
         window.addEventListener('message', function (event) {
             var origin = event.origin; // For Chrome, the origin property is in the event.originalEvent object.
             console.log("ORIGIN", origin)
+            setdata(origin+"YES")
             if (origin !== 'https://oneshot-activity-calculator-git-dev-debjitpramanick.vercel.app/'){
                 setdata(origin)
                 return;
