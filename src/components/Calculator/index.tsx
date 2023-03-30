@@ -49,7 +49,7 @@ const Calculator = () => {
                 })
                 return items;
             });
-        }, 1500);
+        }, 900);
 
         return () => {
             // Clearing timeouts in cleanup
