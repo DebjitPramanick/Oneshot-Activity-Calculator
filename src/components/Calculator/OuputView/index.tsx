@@ -6,7 +6,6 @@ import { BlurOverlay, CircleDataContainer, MainData, OutputData, OutputDataItem,
 import { Flex } from '../../../styles/Shared'
 import { ClipLoader } from 'react-spinners'
 import { getIcon } from '../../../helpers/icons.helper'
-import DEMO from '../data/demoOutput'
 
 interface PropsType {
     outputData: any[];
