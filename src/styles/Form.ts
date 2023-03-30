@@ -20,4 +20,9 @@ export const Button = styled.button`
     background: linear-gradient(135deg, ${colors.gradientA} 0%, ${colors.gradientB} 100%);
     padding: 12px 20px;
     border-radius: 999px;
+
+    &.medium {
+        padding: 16px 26px;
+        font-size: 16px;
+    }
 `

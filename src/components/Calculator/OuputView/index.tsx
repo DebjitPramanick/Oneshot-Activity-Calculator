@@ -41,7 +41,7 @@ const OutputView: React.FC<PropsType> = ({
                     ) : (
                         <>
                             <SubHeading style={{ marginBottom: '16px' }}>Please check the input values and then click below to see the result</SubHeading>
-                            <Button onClick={handleShowOutput}>Reveal</Button>
+                            <Button onClick={handleShowOutput} className='medium'>Reveal</Button>
                         </>
                     )}
                 </BlurOverlay>

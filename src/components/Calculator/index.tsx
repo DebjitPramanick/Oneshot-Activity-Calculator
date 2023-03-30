@@ -86,7 +86,7 @@ const Calculator = () => {
             {!shouldStart && (
                 <BlurOverlay>
                     <SubHeading style={{ marginBottom: '16px' }}>Want to know how much activity you have to do?</SubHeading>
-                    <Button onClick={handleStart}>Yes, Let's try</Button>
+                    <Button onClick={handleStart} className='medium'>Yes, Let's try</Button>
                 </BlurOverlay>
             )}
             <ActionsContainer>

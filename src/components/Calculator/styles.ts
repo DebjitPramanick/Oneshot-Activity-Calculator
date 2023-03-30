@@ -42,6 +42,14 @@ export const BlurOverlay = styled.div<{textWidth?: string}>`
     h1{
         color: #fff;
         width: ${props => props.textWidth || '40%'};
+        @media(max-width: 768px) {
+            width: 90%;
+        }
+    }
+
+    @media(max-width: 768px) {
+        justify-content: start;
+        padding-top: 60px;
     }
 `
 
