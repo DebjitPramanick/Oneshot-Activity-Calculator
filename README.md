@@ -1,46 +1,42 @@
-# Getting Started with Create React App
+Iframe example: https://ld15l5.csb.app/
+Codesandbox: https://codesandbox.io/s/suspicious-gates-ld15l5?file=/index.html
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+Links to integrate: 
+https://calendly.com/oneshot_ai/oneshot-demo?month=2023-03
 
-### `npm start`
+https://oneshot.typedream.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Tasks:
+[X] Convert the conversion rate texts to questions -> Suppose you have 100 leads. How many meetings do you want?
+[X] In results show the output data with proper message
+[X] In circle show leads and email both
+[X] Handle wrong input errors
+[X] Change warning to some different message
+[X] Change the text "Want to try oneshot?" to "Feeling tideous with sending emails?" or similar text
+[X] Remove text under the question "Want to try oneshot?"
+[X] Convert "Chat with us" to "Book a demo"
+[X] Change the link in "Book a demo"
+[X] Check the colors with oneshot.typedream.app
+[X] Make sure input values cannot be negative
+[X] Remove everything from the page just keep the actual calculator
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[] On first render blur the whole app
+[] On the blurred section show a text and a button, text -> "Want to know how much activity you have to do?", button -> Yes
+[] Blur RHS and on the blurred section show a CTA to ask user if the inputs are correct
+[] If user confirms then show a loader for few seconds and reveal the output
+[] With each time input changes show a loader for few seconds and then reveal the output
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Change iframe look > Publish > Resource only
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<style>
+    @media(max-width: 768px){
+        #activity_calculator__custom_container{
+            height: fit-content;
+        }
+    }
+</style>

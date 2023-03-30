@@ -4,28 +4,28 @@ import SliderInput from '../../Form/SliderInput'
 import { InputsContainer } from '../styles'
 
 interface PropsType {
-    fieldsData: any,
+    inputData: any,
     handleFieldVal: (key: any, val: any) => void
 }
 
 const InputView: React.FC<PropsType> = ({
     handleFieldVal,
-    fieldsData
+    inputData
 }) => {
     return (
         <InputsContainer>
-            <div style={{marginBottom: 40}}>
-                <SubHeading style={{marginBottom: 16}}>Select your input data</SubHeading>
+            <div style={{ marginBottom: 40 }}>
+                <SubHeading style={{ marginBottom: 16 }}>Select your input data</SubHeading>
                 <Text>Based on these input values, results will be generated.</Text>
             </div>
-            {fieldsData.map((field: any) => (
+            {inputData.length && inputData.map((input: any) => (
                 <SliderInput
-                    key={field.id}
-                    label={field.title}
-                    val={field.val}
-                    onChange={(val) => handleFieldVal(field.id, val)}
-                    max={field.max}
-                    min={field.min} />
+                    key={input.id}
+                    label={input.title}
+                    val={input.val}
+                    onChange={(val) => handleFieldVal(input.id, val)}
+                    max={input.max}
+                    min={input.min} />
             ))}
         </InputsContainer>
     )
