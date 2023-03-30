@@ -9,6 +9,7 @@ export const CaculatorContainer = styled.div`
     box-shadow: 2px 2px 10px #0000008a;
     background: #fff;
     overflow:hidden;
+    position: relative;
 
     @media(max-width: 1180px){
         width: calc(100% - 112px);
@@ -20,6 +21,27 @@ export const CaculatorContainer = styled.div`
 
     @media(max-width: 500px){
         width: 100%;
+    }
+`
+
+export const BlurOverlay = styled.div<{textWidth?: string}>`
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    backdrop-filter: blur(8px);
+    background: #0000004d;
+    z-index: 9;
+    text-align: center;
+
+    h1{
+        color: #fff;
+        width: ${props => props.textWidth || '40%'};
     }
 `
 
@@ -41,6 +63,7 @@ export const OutputsContainer = styled.div`
     flex-basis: 50%;
     padding: 30px;
     background: linear-gradient(135deg, ${colors.gradientA} 0%, ${colors.gradientB} 100%);
+    position: relative;
     
     p, h1, a {
         color: #fff;

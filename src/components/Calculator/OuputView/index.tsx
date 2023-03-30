@@ -2,19 +2,23 @@ import React from 'react'
 import { formatNumber } from '../../../helpers/calculator.helper'
 import { Button } from '../../../styles/Form'
 import { SubHeading, Text } from '../../../styles/Typography'
-import { CircleDataContainer, MainData, OutputData, OutputDataItem, OutputsContainer, RowDataContainer } from '../styles'
+import { BlurOverlay, CircleDataContainer, MainData, OutputData, OutputDataItem, OutputsContainer, RowDataContainer } from '../styles'
 import { IoPeopleOutline } from 'react-icons/io5'
 import { MdOutlineBusinessCenter } from 'react-icons/md'
 import { MdOutlineLeaderboard } from 'react-icons/md'
 import { FaRegHandshake } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
 import { Flex } from '../../../styles/Shared'
+import { ClipLoader } from 'react-spinners'
 
 interface PropsType {
-    outputData: any
+    outputData: any;
+    handleShowOutput: () => void
+    show: boolean;
+    loading: boolean
 }
 
-const OutputView: React.FC<PropsType> = ({ outputData }) => {
+const OutputView: React.FC<PropsType> = ({ outputData, handleShowOutput, show, loading }) => {
 
 
     const redirectUser = () => {
@@ -23,6 +27,23 @@ const OutputView: React.FC<PropsType> = ({ outputData }) => {
 
     return (
         <OutputsContainer>
+            {!show && (
+                <BlurOverlay textWidth={'60%'}>
+                    {loading ? (
+                        <ClipLoader color='#fff' size={90} />
+                    ) : (
+                        <>
+                            <SubHeading style={{ marginBottom: '16px' }}>Please check the input values and then click below to see the result</SubHeading>
+                            <Button onClick={handleShowOutput}>Reveal</Button>
+                        </>
+                    )}
+                </BlurOverlay>
+            )}
+            {loading && (
+                <BlurOverlay textWidth={'60%'}>
+                    <ClipLoader color='#fff' size={90} />
+                </BlurOverlay>
+            )}
             <SubHeading>Result</SubHeading>
             <OutputData>
                 <CircleDataContainer>
