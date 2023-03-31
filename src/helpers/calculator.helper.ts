@@ -61,3 +61,20 @@ export const getBracketLabel = (key: string, val: string) => {
     else if(key === 'meet_opp') return `(avg. is ${val}% go from meeting to opportunity)`;
     return `(avg. response rate of ${val}%)`;
 }
+
+export const getInputPrefix = (type: 'time' | 'percentage' | 'number') => {
+    let prefix = '';
+
+    switch (type) {
+        case 'time':
+            prefix = 'months';
+            break;
+        case 'percentage':
+            prefix = '%';
+            break;
+        default:
+            break;
+    }
+
+    return prefix;
+}

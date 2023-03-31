@@ -3,7 +3,7 @@ import { MdOutlineBusinessCenter } from 'react-icons/md'
 import { MdOutlineLeaderboard } from 'react-icons/md'
 import { FaRegHandshake } from 'react-icons/fa'
 import { AiOutlineMail } from 'react-icons/ai'
-import {BiDollar} from 'react-icons/bi'
+import { BiDollar } from 'react-icons/bi'
 
 export const getOutputIcon = (key: string, size: any = 20, color: string = '#000') => {
     if (key.toLowerCase().includes('leads')) return <MdOutlineLeaderboard size={size} color={color} />
@@ -14,7 +14,7 @@ export const getOutputIcon = (key: string, size: any = 20, color: string = '#000
     return <AiOutlineMail size={size} color={color} />
 }
 
-export const getInputIcon = (key: string, size: any = 20, color: string = '#000') => {
-    if (key.toLowerCase().includes('revenue')) return <BiDollar size={size} color={color} />
+export const getInputIcon = (key: string, size: any = 20, color: string = '#838383') => {
+    if (key.toLowerCase().includes('revenue')) return <BiDollar size={size} color={color} fontWeight={'normal'} />
     return null;
 }

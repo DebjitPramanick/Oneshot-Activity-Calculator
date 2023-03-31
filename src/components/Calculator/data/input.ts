@@ -49,7 +49,7 @@ const inputs = [
         label: 'Within how much time you want to hit the goal?',
         name: 'months_limit',
         val: 6,
-        type: 'number',
+        type: 'time',
         min: 1,
         max: 96
     }

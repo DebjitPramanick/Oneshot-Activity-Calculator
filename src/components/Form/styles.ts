@@ -23,9 +23,17 @@ export const InputFieldContainer = styled.div`
     background: ${colors.inputBG};
     box-sizing: border-box;
     border-radius: 4px;
-    min-width: 130px;
-    width: 130px;
-    padding-left: 4px;
+    min-width: 134px;
+    width: 134px;
+    padding: 0 6px;
+
+    & .prefix {
+      width: fit-content;
+      color: #7e7e7e;
+      margin-left: auto;
+      overflow: visible;
+      text-overflow: none;
+    }
 `
 
 export const Input = styled.input`
@@ -41,7 +49,7 @@ export const Input = styled.input`
     box-sizing: border-box;
     border-radius: 4px;
     -moz-appearance: textfield;
-    width: calc(100% - 20px);
+    width: 100%;
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {

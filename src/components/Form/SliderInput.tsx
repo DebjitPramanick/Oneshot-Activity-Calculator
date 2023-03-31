@@ -1,7 +1,7 @@
 import React from 'react'
-import { Text } from '../../styles/Typography'
+import { SmallText, Text } from '../../styles/Typography'
 import { Input, InputContainer, InputFieldContainer, LabelFlex, RangeSlider } from './styles'
-import { addCommaToNumber, isValidInput, formatToNumber, getBracketLabel } from '../../helpers/calculator.helper'
+import { addCommaToNumber, isValidInput, formatToNumber, getBracketLabel, getInputPrefix } from '../../helpers/calculator.helper'
 import { getInputIcon } from '../../helpers/icons.helper'
 interface PropsType {
     label: string,
@@ -33,6 +33,8 @@ const SliderInput: React.FC<PropsType> = ({
         onChange(value)
     }
 
+    const inputAlign = type === 'number' ? 'start' : 'end'
+
     return (
         <InputContainer>
             <LabelFlex>
@@ -46,7 +48,8 @@ const SliderInput: React.FC<PropsType> = ({
                         value={addCommaToNumber(val)}
                         onChange={changeHandler}
                         type="text"
-                        style={{padding: '6px 12px 6px 4px'}} />
+                        style={{padding: '6px 12px 6px 4px', textAlign: inputAlign}} />
+                    <SmallText className='prefix'>{getInputPrefix(type)}</SmallText>
                 </InputFieldContainer>
 
             </LabelFlex>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { ActionsContainer, BlurOverlay, CaculatorContainer } from './styles'
+import { ActionsContainer, BlurOverlay, CaculatorContainer, LazyLoader } from './styles'
 import INPUT from './data/input';
 import OUTPUT from './data/output'
 import { calculateResultHelper, formatToNumber } from '../../helpers/calculator.helper'
@@ -9,9 +9,11 @@ import { SubHeading } from '../../styles/Typography'
 import { Button } from '../../styles/Form'
 import DMEO_OUTPUT from './data/demoOutput';
 import { InputLabelsType, IntroLabelsType, OutputLabelsType } from '../../types';
+import { ClipLoader } from 'react-spinners';
 
 const Calculator = () => {
 
+    const [showLoader, setShowLoader] = useState(true) // This loader only appears for first time
     const [inputData, setInputData] = useState<any[]>(INPUT.slice())
     const [outputData, setOutputData] = useState<any[]>(OUTPUT.slice())
     const [shouldStart, setShouldStart] = useState(false)
@@ -30,6 +32,9 @@ const Calculator = () => {
             if (e.data && e.data.hasLabels) {
                 setLabels(e.data)
             }
+            setTimeout(() => {
+                setShowLoader(false)
+            }, 1000)
         }
         window.addEventListener('message', getIframeData)
 
@@ -48,11 +53,11 @@ const Calculator = () => {
             if (shoulReload) setLoading(true)
             let [dealsize, revenueGoal, dealCnvRate, oppCnvRate, leadsCnvRate, months] = inputData;
             const data = {
-                deals: formatToNumber(dealsize.val), 
-                revenueGoal: formatToNumber(revenueGoal.val), 
-                dealCnvRate: dealCnvRate.val, 
-                oppCnvRate: oppCnvRate.val, 
-                leadsCnvRate: leadsCnvRate.val, 
+                deals: formatToNumber(dealsize.val),
+                revenueGoal: formatToNumber(revenueGoal.val),
+                dealCnvRate: dealCnvRate.val,
+                oppCnvRate: oppCnvRate.val,
+                leadsCnvRate: leadsCnvRate.val,
                 months: months.val
             }
             result = calculateResultHelper(data);
@@ -107,6 +112,10 @@ const Calculator = () => {
             setLoading(false)
             setShouldReveal(true)
         }, 1500);
+    }
+
+    if(showLoader) {
+        return <LazyLoader><ClipLoader size={90}/></LazyLoader>
     }
 
     return (

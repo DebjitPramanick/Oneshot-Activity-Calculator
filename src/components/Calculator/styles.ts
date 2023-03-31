@@ -1,6 +1,28 @@
 import styled from 'styled-components'
 import { colors } from '../../styles/Colors'
 
+export const LazyLoader = styled.div`
+    margin: 20px auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media(max-width: 1180px){
+        width: calc(100% - 112px);
+    }
+
+    @media(max-width: 768px){
+        width: calc(100% - 60px);
+    }
+
+    @media(max-width: 500px){
+        width: 100%;
+    }
+`
+
 export const CaculatorContainer = styled.div`
     margin: 20px auto;
     width: 1100px;
