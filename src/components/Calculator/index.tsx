@@ -32,11 +32,11 @@ const Calculator = () => {
             if (e.data && e.data.hasLabels) {
                 setLabels(e.data)
             }
-            setTimeout(() => {
-                setShowLoader(false)
-            }, 1000)
         }
         window.addEventListener('message', getIframeData)
+        setTimeout(() => {
+            setShowLoader(false)
+        }, 1000)
 
         return () => {
             window.removeEventListener('message', getIframeData)

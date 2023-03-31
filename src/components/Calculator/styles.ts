@@ -12,7 +12,7 @@ export const LazyLoader = styled.div`
 `
 
 export const CaculatorContainer = styled.div`
-    margin: auto;
+    margin: 20px auto 0;
     width: 1100px;
     // height: 1500px;
     border-radius: 4px;
