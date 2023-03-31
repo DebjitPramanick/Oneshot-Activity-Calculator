@@ -99,6 +99,7 @@ export const OutputDataItem = styled.div`
     justify-content: space-between;
     margin-bottom: 16px;
     gap: 16px;
+    align-items: end;
 
     & .op-data-label-container {
         display: flex;
