@@ -14,7 +14,7 @@ export const getOutputIcon = (key: string, size: any = 20, color: string = '#000
     return <AiOutlineMail size={size} color={color} />
 }
 
-export const getInputIcon = (key: string, size: any = 20, color: string = '#838383') => {
-    if (key.toLowerCase().includes('revenue')) return <BiDollar size={size} color={color} fontWeight={'normal'} />
+export const getInputIcon = (key: string, size: any = 20, color: string = '#7e7e7e') => {
+    if (key.toLowerCase().includes('revenue')) return <BiDollar size={size} color={color} />
     return null;
 }

@@ -67,7 +67,7 @@ export const getInputPrefix = (type: 'time' | 'percentage' | 'number') => {
 
     switch (type) {
         case 'time':
-            prefix = 'months';
+            prefix = 'm';
             break;
         case 'percentage':
             prefix = '%';
