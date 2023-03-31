@@ -19,7 +19,7 @@ const inputs = [
     },
     {
         id: 3,
-        title: 'Suppose you have 100 opportunities. How many of them are converting into deals?',
+        label: 'Suppose you have 100 opportunities. How many of them are converting into deals?',
         name: 'opp_deal',
         val: 5,
         type: 'percentage',
