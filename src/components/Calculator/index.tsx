@@ -46,8 +46,16 @@ const Calculator = () => {
         // Calculating output
         const calculateOutput = () => {
             if (shoulReload) setLoading(true)
-            let [dealsize, revenueGoal, dealCnvRate, oppCnvRate, leadsCnvRate] = inputData;
-            result = calculateResultHelper(dealsize.val, revenueGoal.val, dealCnvRate.val, oppCnvRate.val, leadsCnvRate.val);
+            let [dealsize, revenueGoal, dealCnvRate, oppCnvRate, leadsCnvRate, months] = inputData;
+            const data = {
+                deals: dealsize.val, 
+                revenueGoal: revenueGoal.val, 
+                dealCnvRate: dealCnvRate.val, 
+                oppCnvRate: oppCnvRate.val, 
+                leadsCnvRate: leadsCnvRate.val, 
+                months: months.val
+            }
+            result = calculateResultHelper(data);
             setShouldReload(false)
         }
 
@@ -106,7 +114,7 @@ const Calculator = () => {
             {!shouldStart && (
                 <BlurOverlay>
                     <SubHeading style={{ marginBottom: '16px' }}>
-                        {labels.introLabels?.shouldTry_label || 'Want to know how much activity you have to do?'}
+                        {labels.introLabels?.shouldTry_label || 'Want to know how much activity you need to do to hit number?'}
                     </SubHeading>
                     <Button onClick={handleStart} className='medium'>
                         {labels.introLabels?.shouldTryButton_label || "Yes, Let's try"}

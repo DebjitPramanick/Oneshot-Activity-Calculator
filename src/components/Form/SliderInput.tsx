@@ -22,7 +22,7 @@ const SliderInput: React.FC<PropsType> = ({
         let value = e.target.value;
         if(value > max) value = max;
         if(value < min) value = min;
-        onChange(value)
+        onChange(Number(value))
     }
 
     return (

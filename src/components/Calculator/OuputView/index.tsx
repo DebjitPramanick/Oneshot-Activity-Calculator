@@ -68,13 +68,13 @@ const OutputView: React.FC<PropsType> = ({
                         <Text className='highlight-text'>{formatNumber(getKeyVal('email'))}</Text>
                         <Flex style={{ gap: 10 }}>
                             {getIcon('emails', 20, '#fff')}
-                            <Text className='op-data-label'>Emails</Text>
+                            <Text className='op-data-label'>Emails (/month)</Text>
                         </Flex>
 
                         <Text className='highlight-text' style={{ marginTop: '16px' }}>{formatNumber(getKeyVal('leads'))}</Text>
                         <Flex style={{ gap: 10 }}>
                             {getIcon('leads', 20, '#fff')}
-                            <Text className='op-data-label'>Leads</Text>
+                            <Text className='op-data-label'>Leads (/month)</Text>
                         </Flex>
                     </MainData>
                 </CircleDataContainer>

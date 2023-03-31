@@ -13,6 +13,7 @@ export interface InputLabelsType {
     opp_deal_label: string;
     meet_opp_label: string;
     leads_meet_label: string;
+    months_limit_label: string
 }
 
 export interface OutputLabelsType {
