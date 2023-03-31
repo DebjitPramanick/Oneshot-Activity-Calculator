@@ -8,7 +8,7 @@ import InputView from './InputView'
 import { SubHeading } from '../../styles/Typography'
 import { Button } from '../../styles/Form'
 import DMEO_OUTPUT from './data/demoOutput';
-import LABELS from './data/labels';
+import { InputLabelsType, IntroLabelsType, OutputLabelsType } from '../../types';
 
 const Calculator = () => {
 
@@ -18,11 +18,18 @@ const Calculator = () => {
     const [shouldReveal, setShouldReveal] = useState(true)
     const [shoulReload, setShouldReload] = useState(false)
     const [loading, setLoading] = useState(false)
-    const [labels, setLabels] = useState<any>(LABELS)
+    const [labels, setLabels] = useState<{
+        hasLabels?: boolean,
+        introLabels?: IntroLabelsType,
+        inputLabels?: InputLabelsType,
+        outputLabels?: OutputLabelsType
+    }>({})
 
     useEffect(() => {
         const getIframeData = (e: any) => {
-            if(e.data && e.data.inputLabels) setLabels(e.data)
+            if (e.data && e.data.hasLabels) {
+                setLabels(e.data)
+            }
         }
         window.addEventListener('message', getIframeData)
 
@@ -98,8 +105,12 @@ const Calculator = () => {
         <CaculatorContainer>
             {!shouldStart && (
                 <BlurOverlay>
-                    <SubHeading style={{ marginBottom: '16px' }}>Want to know how much activity you have to do?</SubHeading>
-                    <Button onClick={handleStart} className='medium'>Yes, Let's try</Button>
+                    <SubHeading style={{ marginBottom: '16px' }}>
+                        {labels.introLabels?.shouldTry_label || 'Want to know how much activity you have to do?'}
+                    </SubHeading>
+                    <Button onClick={handleStart} className='medium'>
+                        {labels.introLabels?.shouldTryButton_label || "Yes, Let's try"}
+                    </Button>
                 </BlurOverlay>
             )}
             <ActionsContainer>
@@ -111,7 +122,9 @@ const Calculator = () => {
                     outputData={!shouldReveal ? DMEO_OUTPUT : outputData}
                     handleShowOutput={handleShowOutput}
                     show={shouldReveal}
-                    loading={loading} />
+                    loading={loading}
+                    labels={labels.outputLabels}
+                    introLabels={labels.introLabels} />
             </ActionsContainer>
         </CaculatorContainer>
     )
