@@ -15,7 +15,20 @@ export const LabelFlex = styled.div`
     gap: 10px;
 `
 
-export const CustomInput = styled.input`
+export const InputFieldContainer = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    color: ${colors.text};
+    background: ${colors.inputBG};
+    box-sizing: border-box;
+    border-radius: 4px;
+    min-width: 130px;
+    width: 130px;
+    padding-left: 4px;
+`
+
+export const Input = styled.input`
     padding: 6px 12px;
     outline: 0;
     border: 0;
@@ -25,10 +38,10 @@ export const CustomInput = styled.input`
     font-weight: 500;
     font-size: 14px;
     line-height: 17px;
-    width: 120px;
     box-sizing: border-box;
     border-radius: 4px;
     -moz-appearance: textfield;
+    width: calc(100% - 20px);
 
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {

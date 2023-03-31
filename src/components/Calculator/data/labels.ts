@@ -10,10 +10,11 @@ const labelsData = {
         heading_label: 'Select your input data',
         subheading_label: 'Based on these input values, results will be generated.',
         deal_label: 'Avg. deal size',
-        revGoal_label: 'Revenue goal',
+        revenueGoal_label: 'Revenue goal',
         opp_deal_label: 'Suppose you have 100 opportunities. How many of them are converting into deals?',
         meet_opp_label: 'Suppose you have 100 cold meetings. How many of them are converting into opportunities?',
-        leads_meet_label: 'Suppose you have reached 100 leads. How many of them are converting into meetings?'
+        leads_meet_label: 'Suppose you have reached 100 leads. How many of them are converting into meetings?',
+        months_limit_label: 'Within how much time you want to hit the goal?'
     },
     outputLabels: {
         customers_label: 'No. of customers you need to reach the revenue goal:',

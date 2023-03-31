@@ -11,17 +11,17 @@ const inputs = [
     {
         id: 2,
         label: 'Revenue goal',
-        name: 'revGoal',
+        name: 'revenueGoal',
         val: 1000000,
         type: 'number',
         min: 1,
-        max: 100000000
+        max: 1000000000
     },
     {
         id: 3,
         label: 'Suppose you have 100 opportunities. How many of them are converting into deals?',
         name: 'opp_deal',
-        val: 5,
+        val: 33,
         type: 'percentage',
         min: 1,
         max: 100
@@ -39,10 +39,19 @@ const inputs = [
         id: 5,
         label: 'Suppose you have reached 100 leads. How many of them are converting into meetings?',
         name: 'leads_meet',
-        val: 2,
+        val: 5,
         type: 'percentage',
         min: 1,
         max: 100
+    },
+    {
+        id: 6,
+        label: 'Within how much time you want to hit the goal?',
+        name: 'months_limit',
+        val: 6,
+        type: 'number',
+        min: 1,
+        max: 96
     }
 ]
 
