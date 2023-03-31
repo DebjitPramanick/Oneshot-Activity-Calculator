@@ -6,19 +6,24 @@ import { BlurOverlay, CircleDataContainer, MainData, OutputData, OutputDataItem,
 import { Flex } from '../../../styles/Shared'
 import { ClipLoader } from 'react-spinners'
 import { getIcon } from '../../../helpers/icons.helper'
+import { IntroLabelsType, OutputLabelsType } from '../../../types'
 
 interface PropsType {
     outputData: any[];
     handleShowOutput: () => void
     show: boolean;
-    loading: boolean
+    loading: boolean;
+    labels?: OutputLabelsType;
+    introLabels?: IntroLabelsType
 }
 
 const OutputView: React.FC<PropsType> = ({
     outputData,
     handleShowOutput,
     show,
-    loading
+    loading,
+    labels,
+    introLabels
 }) => {
 
 
@@ -31,6 +36,12 @@ const OutputView: React.FC<PropsType> = ({
         return outputData[index].val;
     }
 
+    const getOutputLabel = (key: string, altLabel: string) => {
+        let label = altLabel;
+        if (labels) label = (labels as any)[`${key}_label`]
+        return label;
+    }
+
     return (
         <OutputsContainer>
             {!show && (
@@ -39,8 +50,8 @@ const OutputView: React.FC<PropsType> = ({
                         <ClipLoader color='#fff' size={90} />
                     ) : (
                         <>
-                            <SubHeading style={{ marginBottom: '16px' }}>Please check the input values and then click below to see the result</SubHeading>
-                            <Button onClick={handleShowOutput} className='medium'>Reveal</Button>
+                            <SubHeading style={{ marginBottom: '16px' }}>{introLabels?.shouldReveal_label || 'Please check the input values and then click below to see the result'}</SubHeading>
+                            <Button onClick={handleShowOutput} className='medium'>{introLabels?.shouldRevealButton_label || 'Reveal'}</Button>
                         </>
                     )}
                 </BlurOverlay>
@@ -72,7 +83,7 @@ const OutputView: React.FC<PropsType> = ({
                         <OutputDataItem key={item.id}>
                             <div className='op-data-label-container'>
                                 {getIcon(item.name, 20, '#ffffffc9')}
-                                <Text className='op-data-label'>{item.label}</Text>
+                                <Text className='op-data-label'>{getOutputLabel(item.name, item.label)}</Text>
                             </div>
                             <Text className='op-data-val'>{formatNumber(item.val)}</Text>
                         </OutputDataItem>
@@ -82,7 +93,7 @@ const OutputView: React.FC<PropsType> = ({
 
             <div style={{ marginTop: '20px' }}>
                 <SubHeading>
-                    Feeling overwhelmed with all these activities?
+                    {labels?.demoQuestion_label || 'Feeling overwhelmed with all these activities?'}
                 </SubHeading>
                 <Button style={{ margin: '30px auto 0' }} onClick={redirectUser}>Book a demo</Button>
             </div>
