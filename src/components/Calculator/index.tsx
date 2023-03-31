@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { ActionsContainer, BlurOverlay, CaculatorContainer } from './styles'
 import INPUT from './data/input';
 import OUTPUT from './data/output'
-import { calculateResultHelper } from '../../helpers/calculator.helper'
+import { calculateResultHelper, formatToNumber } from '../../helpers/calculator.helper'
 import OutputView from './OuputView'
 import InputView from './InputView'
 import { SubHeading } from '../../styles/Typography'
@@ -48,8 +48,8 @@ const Calculator = () => {
             if (shoulReload) setLoading(true)
             let [dealsize, revenueGoal, dealCnvRate, oppCnvRate, leadsCnvRate, months] = inputData;
             const data = {
-                deals: dealsize.val, 
-                revenueGoal: revenueGoal.val, 
+                deals: formatToNumber(dealsize.val), 
+                revenueGoal: formatToNumber(revenueGoal.val), 
                 dealCnvRate: dealCnvRate.val, 
                 oppCnvRate: oppCnvRate.val, 
                 leadsCnvRate: leadsCnvRate.val, 

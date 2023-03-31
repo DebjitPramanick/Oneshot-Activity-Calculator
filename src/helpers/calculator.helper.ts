@@ -33,6 +33,31 @@ export const formatNumber = (count: number) => {
 }
 
 export const getMonthlyData = (target: number, months: number) => {
-    let data =  Math.ceil(target/months);
+    let data = Math.ceil(target / months);
     return data;
+}
+
+export const isValidInput = (val: any) => {
+    let pattern = /^[0-9,]*$/g
+    let valid = pattern.test(val)
+    return valid;
+}
+
+export const addCommaToNumber = (num: any) => {
+    let numericVal = num.toString().replace(/[^0-9]/g, "");
+    let result = numericVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return result;
+}
+
+export const formatToNumber = (val: any) => {
+    if (typeof val === 'number') return val;
+    let result = val.replaceAll(',', '')
+    result = Number(result)
+    return result;
+}
+
+export const getBracketLabel = (key: string, val: string) => {
+    if(key === 'opp_deal') return `(avg. is ${val}% go onto close)`;
+    else if(key === 'meet_opp') return `(avg. is ${val}% go from meeting to opportunity)`;
+    return `(avg. response rate of ${val}%)`;
 }

@@ -8,6 +8,10 @@ export const Text = styled.p`
     color: ${colors.text};
     text-overflow: ellipsis;
     overflow: hidden;
+
+    span {
+        color: #7e7e7e;
+    }
 `
 export const SmallText = styled.p`
     font-style: normal;

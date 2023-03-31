@@ -5,7 +5,7 @@ import { SubHeading, Text } from '../../../styles/Typography'
 import { BlurOverlay, CircleDataContainer, MainData, OutputData, OutputDataItem, OutputsContainer, RowDataContainer } from '../styles'
 import { Flex } from '../../../styles/Shared'
 import { ClipLoader } from 'react-spinners'
-import { getIcon } from '../../../helpers/icons.helper'
+import { getOutputIcon } from '../../../helpers/icons.helper'
 import { IntroLabelsType, OutputLabelsType } from '../../../types'
 
 interface PropsType {
@@ -67,13 +67,13 @@ const OutputView: React.FC<PropsType> = ({
                     <MainData>
                         <Text className='highlight-text'>{formatNumber(getKeyVal('email'))}</Text>
                         <Flex style={{ gap: 10 }}>
-                            {getIcon('emails', 20, '#fff')}
+                            {getOutputIcon('emails', 20, '#fff')}
                             <Text className='op-data-label'>Emails (/month)</Text>
                         </Flex>
 
                         <Text className='highlight-text' style={{ marginTop: '16px' }}>{formatNumber(getKeyVal('leads'))}</Text>
                         <Flex style={{ gap: 10 }}>
-                            {getIcon('leads', 20, '#fff')}
+                            {getOutputIcon('leads', 20, '#fff')}
                             <Text className='op-data-label'>Leads (/month)</Text>
                         </Flex>
                     </MainData>
@@ -82,7 +82,7 @@ const OutputView: React.FC<PropsType> = ({
                     {outputData.map((item) => (
                         <OutputDataItem key={item.id}>
                             <div className='op-data-label-container'>
-                                {getIcon(item.name, 20, '#ffffffc9')}
+                                {getOutputIcon(item.name, 20, '#ffffffc9')}
                                 <Text className='op-data-label'>{getOutputLabel(item.name, item.label)}</Text>
                             </div>
                             <Text className='op-data-val'>{formatNumber(item.val)}</Text>

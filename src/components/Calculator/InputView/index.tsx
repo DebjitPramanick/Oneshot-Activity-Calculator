@@ -32,8 +32,10 @@ const InputView: React.FC<PropsType> = ({
                 <SliderInput
                     key={input.id}
                     label={getInputLabel(input.name, input.label)}
+                    name={input.name}
                     val={input.val}
                     onChange={(val) => handleFieldVal(input.id, val)}
+                    type={input.type}
                     max={input.max}
                     min={input.min} />
             ))}

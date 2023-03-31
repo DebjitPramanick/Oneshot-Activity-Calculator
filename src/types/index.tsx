@@ -9,7 +9,7 @@ export interface InputLabelsType {
     heading_label: string;
     subheading_label: string;
     deal_label: string;
-    revGoal_label: string;
+    revenueGoal_label: string;
     opp_deal_label: string;
     meet_opp_label: string;
     leads_meet_label: string;
