@@ -28,7 +28,7 @@ const OutputView: React.FC<PropsType> = ({
 
 
     const redirectUser = () => {
-        window.open('https://calendly.com/oneshot_ai/oneshot-demo')
+        window.open('https://meetings.hubspot.com/gautam-rishi/demo-round-robin?utm_source=activitycalc&utm_medium=book')
     }
 
     const getKeyVal = (key: string) => {
